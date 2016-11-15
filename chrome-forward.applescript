@@ -1,23 +1,34 @@
-#!/usr/bin/osascript
-(**
+/**
  * @author		Suat Secmen (http://suat.be)
- * @copyright		2016 Suat Secmen
+ * @copyright	2016 Suat Secmen
  * @license		WTFPL <http://www.wtfpl.net/>
  * @description
  *  Try to go forward in frontmost Google Chrome tab.
  *  If not possible open the last tab/window.
- *)
-tell application "Google Chrome"
-	try
-		set w to window 1
-		set t to the active tab of w
-		set a to URL of t
-		go forward t
-		delay 0.2
-		set b to URL of t
-		if a is equal to b then tell application "System Events" to keystroke "t" using {command down, shift down}
-	on error e
-		activate
-		tell application "System Events" to keystroke "t" using {command down, shift down}
-	end try
-end tell
+ */
+
+Chrome = Application('Google Chrome');
+
+/**
+ * Open the last closed tab (cmd + shift + T)
+ */
+function openClosedTab() {
+	Chrome.activate();
+	delay(.1);
+	Application('System Events').keystroke('t', {
+		using: ['command down', 'shift down']
+	});
+}
+
+try {
+	var tab = Chrome.windows()[0].activeTab(),
+		a = tab.url();
+	tab.goForward();
+	delay(.2);
+	var b = tab.url();
+	if (a === b) {
+		openClosedTab();
+	}
+} catch(e){
+	openClosedTab();
+}
