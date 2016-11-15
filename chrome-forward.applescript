@@ -1,3 +1,4 @@
+#!/usr/bin/osascript
 tell application "Google Chrome"
 	try
 		set w to window 1

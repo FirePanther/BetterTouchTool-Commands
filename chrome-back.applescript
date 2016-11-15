@@ -1,3 +1,4 @@
+#!/usr/bin/osascript
 tell application "Google Chrome" to tell the active tab of window 1
 	set a to URL
 	go back
