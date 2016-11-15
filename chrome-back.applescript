@@ -1,7 +1,7 @@
 /**
- * @author		Suat Secmen (http://suat.be)
- * @copyright	2016 Suat Secmen
- * @license		WTFPL <http://www.wtfpl.net/>
+ * @author      Suat Secmen (http://suat.be)
+ * @copyright   2016 Suat Secmen
+ * @license     WTFPL <http://www.wtfpl.net/>
  * @description
  *  Try to go back in frontmost Google Chrome tab.
  *  If not possible just close the tab.
