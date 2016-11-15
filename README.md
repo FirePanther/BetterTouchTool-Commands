@@ -1,4 +1,4 @@
-# GDrive-BetterTouchTool
+# BetterTouchTool-Commands
 
 ### Run *.applescript from BTT (BetterTouchTool):
 
