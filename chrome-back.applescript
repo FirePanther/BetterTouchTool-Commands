@@ -9,7 +9,7 @@
 
 try {
 	var Chrome = Application('Google Chrome'),
-		tab = Chrome.windows()[0].activeTab(),
+		tab = Chrome.windows[0].activeTab,
 		a = tab.url();
 	tab.goBack();
 	delay(.2);

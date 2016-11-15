@@ -21,7 +21,7 @@ function openClosedTab() {
 }
 
 try {
-	var tab = Chrome.windows()[0].activeTab(),
+	var tab = Chrome.windows[0].activeTab,
 		a = tab.url();
 	tab.goForward();
 	delay(.2);
