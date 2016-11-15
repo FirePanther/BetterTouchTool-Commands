@@ -1,4 +1,12 @@
 #!/usr/bin/osascript
+(**
+ * @author		Suat Secmen (http://suat.be)
+ * @copyright		2016 Suat Secmen
+ * @license		WTFPL <http://www.wtfpl.net/>
+ * @description
+ *  Try to go forward in frontmost Google Chrome tab.
+ *  If not possible open the last tab/window.
+ *)
 tell application "Google Chrome"
 	try
 		set w to window 1
