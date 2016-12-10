@@ -1,5 +1,5 @@
 /**
- * @author      Suat Secmen (http://suat.be)
+ * @author      Suat Secmen (http://su.at)
  * @copyright   2016 Suat Secmen
  * @license     WTFPL <http://www.wtfpl.net/>
  * @description
